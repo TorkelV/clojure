@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="99d62bc2-bbc8-4ec3-83ef-5219c78c1f98" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="core.clj" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/finn/core.clj">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="57" column="19" lean-forward="true" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="project.clj" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project.clj">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>/job/fulltime/ad.html?finnkode=121867743</find>
+      <find>mod</find>
+      <find>annonse</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/project.clj" />
+        <option value="$PROJECT_DIR$/src/finn/core.clj" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-18" />
+    <option name="y" value="83" />
+    <option name="width" value="1390" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="finn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="finn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="finn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="finn" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="finn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="finn" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="finn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="finn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="finn" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="finn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="finn" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="finn" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="ReplState" timestamp="1528677649672">{:repl-history {:ide [], :local [{:command &quot;finn.core/create-server&quot;, :offset 23, :ns &quot;user&quot;} {:command &quot;(finn.core/create-server)&quot;, :offset 25, :ns &quot;user&quot;} {:command &quot;(finn.core/stop-server)&quot;, :offset 23, :ns &quot;user&quot;} {:command &quot;(finn.core/run-server)&quot;, :offset 22, :ns &quot;user&quot;} {:command &quot;(finn.core.plus 5)&quot;, :offset 18, :ns &quot;user&quot;} {:command &quot;(finn.core/plus 5)&quot;, :offset 18, :ns &quot;user&quot;} {:command &quot;(finn.core/plus 8)&quot;, :offset 18, :ns &quot;user&quot;} {:command &quot;(finn.core/annonser)&quot;, :offset 20, :ns &quot;user&quot;} {:command &quot;(finn.core/hitcount)&quot;, :offset 20, :ns &quot;user&quot;} {:command &quot;(finn.core/annonser (htmlbody \&quot;https://www.finn.no/job/fulltime/search.html?location=0.20001&amp;occupation=0.23&amp;page=1\&quot;))&quot;, :offset 118, :ns &quot;user&quot;} {:command &quot;(finn.core/annonser (finn.core/htmlbody \&quot;https://www.finn.no/job/fulltime/search.html?location=0.20001&amp;occupation=0.23&amp;page=1\&quot;))&quot;, :offset 128, :ns &quot;user&quot;} {:command &quot;(def tmpa (finn.core/annonser (finn.core/htmlbody \&quot;https://www.finn.no/job/fulltime/search.html?location=0.20001&amp;occupation=0.23&amp;page=1\&quot;))) &quot;, :offset 139, :ns &quot;user&quot;} {:command &quot;tmpa&quot;, :offset 4, :ns &quot;user&quot;} {:command &quot;(type tmpa)&quot;, :offset 11, :ns &quot;user&quot;} {:command &quot;(concat tmpa tmpa)&quot;, :offset 18, :ns &quot;user&quot;} {:command &quot;(concat '() tmpa)&quot;, :offset 17, :ns &quot;user&quot;} {:command &quot;(count (finn.core/annonser (finn.core/htmlbody \&quot;https://www.finn.no/job/fulltime/search.html?location=0.20001\&quot;))) &quot;, :offset 113, :ns &quot;user&quot;} {:command &quot;(count (finn.core/annonser (finn.core/htmlbody \&quot;https://www.finn.no/job/fulltime/search.html?location=0.20001&amp;page=2\&quot;))) &quot;, :offset 121, :ns &quot;user&quot;} {:command &quot;(count (finn.core/annonser (finn.core/htmlbody \&quot;https://www.finn.no/job/fulltime/search.html?location=0.20001&amp;page=3\&quot;))) &quot;, :offset 121, :ns &quot;user&quot;} {:command &quot;(count (finn.core/annonser (finn.core/htmlbody \&quot;https://www.finn.no/job/fulltime/search.html?location=0.20001&amp;page=5\&quot;))) &quot;, :offset 121, :ns &quot;user&quot;} {:command &quot;(finn.core/hitcount (finn.core/annonser (finn.core/htmlbody \&quot;https://www.finn.no/job/fulltime/search.html?location=0.20001&amp;page=5\&quot;))) &quot;, :offset 133, :ns &quot;user&quot;} {:command &quot;(finn.core/hitcount (finn.core/htmlbody \&quot;https://www.finn.no/job/fulltime/search.html?location=0.20001&amp;page=5\&quot;))&quot;, :offset 112, :ns &quot;user&quot;} {:command &quot;(finn.core/pages (finn.core/htmlbody \&quot;https://www.finn.no/job/fulltime/search.html?location=0.20001&amp;page=5\&quot;))&quot;, :offset 109, :ns &quot;user&quot;} {:command &quot;(finn.core/pages (finn.core/htmlbody \&quot;https://www.finn.no/job/fulltime/search.html?location=0.20001&amp;page=171\&quot;))&quot;, :offset 111, :ns &quot;user&quot;} {:command &quot;(count (finn.core/annonser (finn.core/htmlbody \&quot;https://www.finn.no/job/fulltime/search.html?location=0.20001&amp;page=171\&quot;)) )&quot;, :offset 123, :ns &quot;user&quot;} {:command &quot;(finn.core/itAnnonser)&quot;, :offset 22, :ns &quot;user&quot;} {:command &quot;(finn.core/beskrivelse (finn.core/htmlbody \&quot;https://www.finn.no/job/fulltime/ad.html?finnkode=120954352\&quot;))&quot;, :offset 106, :ns &quot;user&quot;} {:command &quot;(-&gt; (finn.core/beskrivelse (finn.core/htmlbody \&quot;https://www.finn.no/job/fulltime/ad.html?finnkode=120954352\&quot;)) (drop 1) first type)&quot;, :offset 131, :ns &quot;user&quot;} {:command &quot;(-&gt; (finn.core/beskrivelse (finn.core/htmlbody \&quot;https://www.finn.no/job/fulltime/ad.html?finnkode=120954352\&quot;)) (drop 1))&quot;, :offset 120, :ns &quot;user&quot;} {:command &quot;(def b (finn.core/beskrivelse (finn.core/htmlbody \&quot;https://www.finn.no/job/fulltime/ad.html?finnkode=120954352\&quot;))) &quot;, :offset 114, :ns &quot;user&quot;} {:command &quot;(drop 1 b)&quot;, :offset 10, :ns &quot;user&quot;} {:command &quot;(first (drop 1 b)) (drop 1 b)&quot;, :offset 19, :ns &quot;user&quot;} {:command &quot;(first (drop 1 b))&quot;, :offset 18, :ns &quot;user&quot;} {:command &quot;(first (drop 2 b))&quot;, :offset 18, :ns &quot;user&quot;} {:command &quot;(type (first (drop 2 b))) &quot;, :offset 26, :ns &quot;user&quot;} {:command &quot;(type (first (first (drop 2 b))) ) &quot;, :offset 35, :ns &quot;user&quot;} {:command &quot;(map #( if (= (type %) clojure.lang.PersistentVector) (first (map :content %))  %) b)&quot;, :offset 85, :ns &quot;user&quot;} {:command &quot;(some #((= (type %) clojure.lang.PersistentVector)) b)&quot;, :offset 54, :ns &quot;user&quot;} {:command &quot;(map :content b)&quot;, :offset 16, :ns &quot;user&quot;} {:command &quot;(:content b)&quot;, :offset 12, :ns &quot;user&quot;} {:command &quot;(map :content (:content b))&quot;, :offset 27, :ns &quot;user&quot;} {:command &quot;(map type (map :content (:content b))) &quot;, :offset 38, :ns &quot;user&quot;} {:command &quot;(finn.core/beskrivelse (finn.core/htmlbody \&quot;https://www.finn.no/job/fulltime/ad.html?finnkode=120954352\&quot; ))&quot;, :offset 107, :ns &quot;user&quot;} {:command &quot;(loop [col b]\n  (if (some #(= (type %) clojure.lang.PersistentVector) col)\n    col\n    (recur (map #(if (= (type %) clojure.lang.PersistentVector) (first (map :content %)) % ) col))))&quot;, :offset 183, :ns &quot;user&quot;} {:command &quot;(loop [col user/b]\n  (if (some #(= (type %) clojure.lang.PersistentVector) col)\n    col\n    (recur (map #(if (= (type %) clojure.lang.PersistentVector) (first (map :content %)) % ) col))))&quot;, :offset 188, :ns &quot;user&quot;} {:command &quot;(some #(= (type %) clojure.lang.PersistentVector) user/b)&quot;, :offset 57, :ns &quot;user&quot;} {:command &quot;(def b (finn.core/beskrivelse (finn.core/htmlbody \&quot;https://www.finn.no/job/fulltime/ad.html?finnkode=120954352\&quot; ))) &quot;, :offset 115, :ns &quot;user&quot;} {:command &quot;(some #(= (type %) clojure.lang.PersistentVector) col)&quot;, :offset 54, :ns &quot;user&quot;} {:command &quot;(some #(= (type %) clojure.lang.PersistentVector) b)&quot;, :offset 52, :ns &quot;user&quot;} {:command &quot;(map type b)&quot;, :offset 12, :ns &quot;user&quot;} {:command &quot;b&quot;, :offset 1, :ns &quot;user&quot;} {:command &quot;(float-array b)&quot;, :offset 15, :ns &quot;user&quot;} {:command &quot;(map type (flatten b))&quot;, :offset 22, :ns &quot;user&quot;} {:command &quot;(map #(if (= (type %) clojure.lang.PersistentArrayMap) (first (map :content %)) % &quot;, :offset 82, :ns &quot;user&quot;} {:command &quot;(map #(if (= (type %) clojure.lang.PersistentArrayMap) (first (map :content %)) % ) b)&quot;, :offset 86, :ns &quot;user&quot;} {:command &quot;(map #(if (= (type %) clojure.lang.PersistentArrayMap) (first (map :content %)) % ) (flatten b))&quot;, :offset 96, :ns &quot;user&quot;} {:command &quot;(flatten b)&quot;, :offset 11, :ns &quot;user&quot;} {:command &quot;(map #(if (= (type %) clojure.lang.PersistentArrayMap) (map :content %) % ) (flatten b))&quot;, :offset 88, :ns &quot;user&quot;} {:command &quot;(map #(if (= (type %) clojure.lang.PersistentArrayMap) (:content %) % ) (flatten b))&quot;, :offset 84, :ns &quot;user&quot;} {:command &quot;(loop [col (flatten items)]\n  (if (some #(= (type %) clojure.lang.PersistentArrayMap) col)\n    col\n    (recur (flatten (map #(if (= (type %) clojure.lang.PersistentArrayMap) (:content %) % ) (flatten b))))))&quot;, :offset 207, :ns &quot;user&quot;} {:command &quot;(loop [col (flatten b)]\n  (if (some #(= (type %) clojure.lang.PersistentArrayMap) col)\n    col\n    (recur (flatten (map #(if (= (type %) clojure.lang.PersistentArrayMap) (:content %) % ) (flatten b))))))&quot;, :offset 203, :ns &quot;user&quot;} {:command &quot;(loop [col (flatten b)]\n  (if (some #(= (type %) clojure.lang.PersistentArrayMap) (flatten col))\n    col\n    (recur (flatten (map #(if (= (type %) clojure.lang.PersistentArrayMap) (:content %) % ) (flatten b))))))&quot;, :offset 213, :ns &quot;user&quot;} {:command &quot;(map type (loop [col (flatten b)]\n            (if (some #(= (type %) clojure.lang.PersistentArrayMap) (flatten col))\n              col\n              (recur (flatten (map #(if (= (type %) clojure.lang.PersistentArrayMap) (:content %) % ) (flatten b))))))) &quot;, :offset 255, :ns &quot;user&quot;} {:command &quot;(loop [col (flatten b)]\n            (if (some #(= (type %) clojure.lang.PersistentArrayMap) (flatten col))\n              col\n              (recur (flatten (map #(if (= (type %) clojure.lang.PersistentArrayMap) (:content %) % ) (flatten b))))))&quot;, :offset 243, :ns &quot;user&quot;} {:command &quot;(loop [col (flatten b)]\n            (if (some #(= (type %) clojure.lang.PersistentArrayMap) (flatten col))\n              col\n              (recur (map #(if (= (type %) clojure.lang.PersistentArrayMap) (:content %) % ) (flatten b)))))&quot;, :offset 233, :ns &quot;user&quot;} {:command &quot;(loop [col (flatten b)]\n            (if (some #(= (type %) clojure.lang.PersistentArrayMap) col)\n              col\n              (recur (map #(if (= (type %) clojure.lang.PersistentArrayMap) (:content %) % ) (flatten b)))))&quot;, :offset 223, :ns &quot;user&quot;} {:command &quot;(map type (loop [col (flatten b)]\n            (if (some #(= (type %) clojure.lang.PersistentArrayMap) col)\n              col\n              (recur (map #(if (= (type %) clojure.lang.PersistentArrayMap) (:content %) % ) (flatten b)))))) &quot;, :offset 234, :ns &quot;user&quot;} {:command &quot;(some #(= (type %) clojure.lang.PersistentArrayMap) (loop [col (flatten b)]\n            (if (some #(= (type %) clojure.lang.PersistentArrayMap) col)\n              col\n              (recur (map #(if (= (type %) clojure.lang.PersistentArrayMap) (:content %) % ) (flatten b)))))) &quot;, :offset 277, :ns &quot;user&quot;} {:command &quot;(some #(= (type %) clojure.lang.PersistentArrayMap) (loop [col (flatten b)]\n            (if (some #(= (type %) clojure.lang.PersistentArrayMap) col)\n              (recur (map #(if (= (type %) clojure.lang.PersistentArrayMap) (:content %) % ) (flatten b)))\n              col))) &quot;, :offset 276, :ns &quot;user&quot;} {:command &quot;(loop [col (flatten b)]\n            (if (some #(= (type %) clojure.lang.PersistentArrayMap) col)\n              (recur (map #(if (= (type %) clojure.lang.PersistentArrayMap) (:content %) % ) (flatten b)))\n              col))&quot;, :offset 223, :ns &quot;user&quot;} {:command &quot;(map type (loop [col (flatten b)]\n            (if (some #(= (type %) clojure.lang.PersistentArrayMap) col)\n              (recur (map #(if (= (type %) clojure.lang.PersistentArrayMap) (:content %) % ) (flatten b)))\n              col))) &quot;, :offset 235, :ns &quot;user&quot;} {:command &quot;(map type (loop [col (flatten b)]\n            (if (some #(= (type %) clojure.lang.PersistentArrayMap) col)\n              (recur (flatten (map #(if (= (type %) clojure.lang.PersistentArrayMap) (:content %) % ) (flatten b))))\n              col)))&quot;, :offset 244, :ns &quot;user&quot;}], :remote []}}</component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Clojure REPL.REPL">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="REPL" type="ClojureREPL" factoryName="Local">
+      <module name="finn" />
+      <setting name="replType" value="1" />
+      <setting name="jvmArgs" value="" />
+      <setting name="parameters" value="" />
+      <setting name="workingDir" value="$PROJECT_DIR$" />
+      <setting name="profiles" value="" />
+    </configuration>
+    <configuration name="finn.core" type="ClojureScriptRunConfiguration" factoryName="Clojure Script" temporary="true">
+      <module name="finn" />
+      <setting name="path" value="$PROJECT_DIR$/src/finn/core.clj" />
+      <setting name="namespace" value="" />
+      <setting name="useLein" value="false" />
+      <setting name="profiles" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="$PROJECT_DIR$/src/finn" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <list>
+      <item itemvalue="Clojure REPL.REPL" />
+      <item itemvalue="Clojure Application.finn.core" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Clojure Application.finn.core" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="99d62bc2-bbc8-4ec3-83ef-5219c78c1f98" name="Default" comment="" />
+      <created>1528567433530</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1528567433530</updated>
+      <workItem from="1528567436973" duration="4768000" />
+      <workItem from="1528659395868" duration="13449000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="18217000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5005208" side_tool="true" weight="0.18796198" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info active="true" anchor="right" id="REPL" order="3" side_tool="true" visible="true" weight="0.5143011" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49947917" weight="0.3295688" />
+      <window_info anchor="right" id="Leiningen" order="3" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.18888289" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.33579725" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="8" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/finn/core.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/finn/core_test.clj">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/finn/core.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="57" column="19" lean-forward="true" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
