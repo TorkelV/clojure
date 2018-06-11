@@ -6,4 +6,5 @@
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [http-kit "2.2.0"]
                  [compojure "1.6.1"]
-                 [hickory "0.7.1"]])
+                 [hickory "0.7.1"]
+                 [org.clojure/data.json "0.2.6"]])

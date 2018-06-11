@@ -3,30 +3,12 @@
             [org.httpkit.client :as http]
             [hickory.core :as hick]
             [hickory.select :as s]
-            [compojure.core :refer [routes POST GET ANY]]))
+            [compojure.core :refer [routes POST GET ANY]]
+            [clojure.data.json :as json]))
 
-(defonce ^:private server (atom nil))
+(defonce ^:public server (atom nil))
 
 
-(defn app []
-  (routes
-    (GET "/" [:as req]
-      {:status  200
-       :headers {"Content-Type" "text/html"}
-       :body    "<h1>hello</h1>"})
-    (GET "/:user-name" [user-name :as req]
-      {:status  200
-       :headers {"Content-Type" "text/html"}
-       :body    (format "<h1> hi from %s" user-name)})))
-
-(defn create-server []
-  (server/run-server (app) {:port 8080}))
-
-(defn run-server []
-  (reset! server (create-server)))
-
-(defn stop-server [server]
-  (server :timeout 100))
 
 
 (defn merge-arrays-to-map [ks vs]
@@ -76,18 +58,22 @@
 (defn pages [body]
   (Math/ceil (/ (hitcount body) (dec (count (annonser body))))))
 
-(defn itannonser []
-  (def url "https://www.finn.no/job/fulltime/search.html?location=0.20001&occupation=0.23&page=")
+(defn annonselinks [occupation]
+  (def url (str "https://www.finn.no/job/fulltime/search.html?occupation=" occupation "&page="))
   (let [body (htmlbody (str url "1"))]
-    (loop [res '() cnt (pages body)]
-      (if (<= cnt 1.0)
-        res
-        (let [tmpa (htmlbody (str url cnt))]
-          (recur (concat res (annonser tmpa)) (dec cnt))))))
+    (let  [tannonser (loop [res '() cnt (pages body)]
+                      (if (<= cnt 1.0)
+                        res
+                        (let [tmpa (htmlbody (str url cnt))]
+                          (recur (concat res (annonser tmpa)) (dec cnt)))))]
+      tannonser) )
   )
 
+(defn annonselinks-formatted [a]
+  (map #(assoc '{} :jobtype (re-find #"fulltime|management|parttime" %) :kode (re-find #"\d+" %)) a)
+  )
 
-(defn beskrivelse [body]
+(defn description [body]
   (let [items (remove nil?
                       (map :content
                            (-> (s/select
@@ -97,24 +83,71 @@
                                :content)))]
     (hickmaptostring items)))
 
-(defn tittel [body]
+(defn title [body]
   (-> (s/select (s/descendant (s/class "h1")) body)
       first
       :content
-      first))
+      first)
 
-(defn semi-strukturert-beskrivelse [body]
-  (let [grouped (map (fn [k] (partition-by #(get (get % :attrs) :data-automation-id) k))
-                     (map #(remove string? %)
-                          (map :content
-                               (-> (s/select (s/descendant (s/class "r-prl")) body)))))]
-    (let [g2 (map flatten
-                  (apply concat
-                         (map (fn [v]
-                                (partition 2
-                                           (map #(map :content %) v)))
-                              grouped)))]  (map (fn [v] (map #(if (= (type %) clojure.lang.PersistentArrayMap) (:content %) %) v) ) g2)) )
+  (defn keyed-description [body]
+    (let [grouped (map (fn [k] (partition-by #(get (get % :attrs) :data-automation-id) k))
+                       (map #(filter :content %)
+                            (map :content
+                                 (s/select (s/descendant (s/class "r-prl")) body))))]
+      (let [g2 (map flatten
+                    (apply concat
+                           (map (fn [v]
+                                  (partition 2
+                                             (map (fn [v2] (map :content v2)) v)))
+                                grouped)))] (map (fn [v] (flatten (map #(if (= (type %) clojure.lang.PersistentArrayMap) (:content %) %) v))) g2)))
+    ))
+
+(defn annonse [body]
+  {:title (title body)
+   :description (description body)
+   :keyed-decription (keyed-description body)}
   )
+
+(defn writeannonser []
+  (spit "annonser.txt" "test123")
+  )
+
+
+
+(defn app []
+  (routes
+    (GET "/parttime/:kode" [kode :as req]
+      {:status  200
+       :headers {"Content-Type" "application/json"}
+       :body    (json/write-str (annonse (htmlbody (str "https://www.finn.no/job/parttime/ad.html?finnkode=" kode) )))})
+    (GET "/fulltime/:kode" [kode :as req]
+      {:status  200
+       :headers {"Content-Type" "application/json"}
+       :body    (json/write-str (annonse (htmlbody (str "https://www.finn.no/job/fulltime/ad.html?finnkode=" kode) )))})
+    (GET "/management/:kode" [kode :as req]
+      {:status  200
+       :headers {"Content-Type" "application/json"}
+       :body    (json/write-str (annonse (htmlbody (str "https://www.finn.no/job/management/ad.html?finnkode=" kode) )))})
+    (GET "/annonser/:occupation" [occupation :as req]
+      {:status  200
+       :headers {"Content-Type" "application/json"}
+       :body    (json/write-str (annonselinks (read-string occupation)))})
+    (GET "/annonserformatted/:occupation" [occupation :as req]
+      {:status  200
+       :headers {"Content-Type" "application/json"}
+       :body    (json/write-str (annonselinks-formatted (annonselinks (read-string occupation))))})))
+
+(defn create-server []
+  (server/run-server (app) {:port 8080}))
+
+(defn run-server []
+  (reset! server (create-server)))
+
+(defn stop-server [server]
+  (server :timeout 100))
+
+
+
 
 
 
