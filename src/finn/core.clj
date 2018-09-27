@@ -4,11 +4,30 @@
             [hickory.core :as hick]
             [hickory.select :as s]
             [compojure.core :refer [routes POST GET ANY]]
-            [clojure.data.json :as json]))
+            [clojure.data.json :as json]
+            [clojure.java.jdbc :as sql]))
 
 (defonce ^:public server (atom nil))
 
+(def db "postgresql://localhost:5432/shouter")
 
+(defn finn-ad-url [id jobtype]
+  (str "https://www.finn.no/job/" jobtype "/ad.html?finnkode=" id)
+  )
+
+(defn save-ad [ad]
+  (sql/insert! db :ad (assoc '{} :id (:id ad)
+                                 :jobtype (:jobtype ad)
+                                 :description (:description ad)
+                                 :title (:title ad)
+                                 :url (finn-ad-url (:id ad) (:jobtype ad))
+                                 )
+               )
+  (map #(sql/insert! db :descc %)
+       (vec (map #(assoc '{} :key (first %)
+                             :value (clojure.string/join "," (rest %))
+                             :adkey (:id ad)) (:k-decription ad))))
+  )
 
 
 (defn merge-arrays-to-map [ks vs]
@@ -56,21 +75,23 @@
   )
 
 (defn pages [body]
-  (Math/ceil (/ (hitcount body) (dec (count (annonser body))))))
+  (int(Math/ceil (/ (hitcount body) (dec (count (annonser body)))))))
 
+
+;; 0.23 for IT Utvikling
 (defn annonselinks [occupation]
   (def url (str "https://www.finn.no/job/fulltime/search.html?occupation=" occupation "&page="))
   (let [body (htmlbody (str url "1"))]
-    (let  [tannonser (loop [res '() cnt (pages body)]
-                      (if (<= cnt 1.0)
+    (let [tannonser (loop [res '() cnt (pages body)]
+                      (if (<= cnt 1)
                         res
                         (let [tmpa (htmlbody (str url cnt))]
                           (recur (concat res (annonser tmpa)) (dec cnt)))))]
-      tannonser) )
+      tannonser))
   )
 
 (defn annonselinks-formatted [a]
-  (map #(assoc '{} :jobtype (re-find #"fulltime|management|parttime" %) :kode (re-find #"\d+" %)) a)
+  (map #(assoc '{} :jobtype (re-find #"fulltime|management|parttime" %) :id (re-find #"\d+" %)) a)
   )
 
 (defn description [body]
@@ -87,47 +108,62 @@
   (-> (s/select (s/descendant (s/class "h1")) body)
       first
       :content
-      first)
+      first))
 
-  (defn keyed-description [body]
-    (let [grouped (map (fn [k] (partition-by #(get (get % :attrs) :data-automation-id) k))
-                       (map #(filter :content %)
-                            (map :content
-                                 (s/select (s/descendant (s/class "r-prl")) body))))]
-      (let [g2 (map flatten
-                    (apply concat
-                           (map (fn [v]
-                                  (partition 2
-                                             (map (fn [v2] (map :content v2)) v)))
-                                grouped)))] (map (fn [v] (flatten (map #(if (= (type %) clojure.lang.PersistentArrayMap) (:content %) %) v))) g2)))
+(defn keyed-description [body]
+  (let [grouped (map (fn [k] (partition-by #(get (get % :attrs) :data-automation-id) k))
+                     (map #(filter :content %)
+                          (map :content
+                               (s/select (s/descendant (s/class "r-prl")) body))))]
+    (let [g2 (map flatten
+                  (apply concat
+                         (map (fn [v]
+                                (partition 2
+                                           (map (fn [v2] (map :content v2)) v)))
+                              grouped))) g3 (map (fn [v] (flatten (map #(if (= (type %) clojure.lang.PersistentArrayMap) (:content %) %) v)))
+
+                                                 g2)] (map #(remove clojure.string/blank? %) g3))))
+
+(defn annonse [id jobtype]
+  (let [url (finn-ad-url id jobtype) body (htmlbody url)]
+    {:id           id
+     :url          url
+     :jobtype      jobtype
+     :title        (title body)
+     :description  (description body)
+     :k-decription (keyed-description body)
+     }
     ))
 
-(defn annonse [body]
-  {:title (title body)
-   :description (description body)
-   :keyed-decription (keyed-description body)}
-  )
+(defn filter-saved [ads]
+  (let [s-ads (sql/query db ["select id from ad"])]
+    (remove (fn [v] (some #(= (:id %) (:id v)) s-ads)) ads)
+    ))
 
-(defn writeannonser []
-  (spit "annonser.txt" "test123")
-  )
 
+
+
+(defn save-all [occupation]
+  (let [links (filter-saved (annonselinks-formatted (annonselinks (read-string occupation))))]
+    (map #(save-ad (annonse (:id %) (:jobtype %))) links)
+    )
+  )
 
 
 (defn app []
   (routes
-    (GET "/parttime/:kode" [kode :as req]
+    (GET "/parttime/:id" [id :as req]
       {:status  200
        :headers {"Content-Type" "application/json"}
-       :body    (json/write-str (annonse (htmlbody (str "https://www.finn.no/job/parttime/ad.html?finnkode=" kode) )))})
-    (GET "/fulltime/:kode" [kode :as req]
+       :body    (json/write-str (annonse id "parttime"))})
+    (GET "/fulltime/:id" [id :as req]
       {:status  200
        :headers {"Content-Type" "application/json"}
-       :body    (json/write-str (annonse (htmlbody (str "https://www.finn.no/job/fulltime/ad.html?finnkode=" kode) )))})
-    (GET "/management/:kode" [kode :as req]
+       :body    (json/write-str (annonse id "fulltime"))})
+    (GET "/management/:id" [id :as req]
       {:status  200
        :headers {"Content-Type" "application/json"}
-       :body    (json/write-str (annonse (htmlbody (str "https://www.finn.no/job/management/ad.html?finnkode=" kode) )))})
+       :body    (json/write-str (annonse id "management"))})
     (GET "/annonser/:occupation" [occupation :as req]
       {:status  200
        :headers {"Content-Type" "application/json"}

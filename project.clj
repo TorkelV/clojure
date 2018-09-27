@@ -7,4 +7,6 @@
                  [http-kit "2.2.0"]
                  [compojure "1.6.1"]
                  [hickory "0.7.1"]
+                 [org.clojure/java.jdbc "0.6.1"]
+                 [org.postgresql/postgresql "9.4-1201-jdbc41"]
                  [org.clojure/data.json "0.2.6"]])
