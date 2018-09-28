@@ -75,7 +75,7 @@
   )
 
 (defn pages [body]
-  (int(Math/ceil (/ (hitcount body) (dec (count (annonser body)))))))
+  (int (Math/ceil (/ (hitcount body) (dec (count (annonser body)))))))
 
 
 ;; 0.23 for IT Utvikling
@@ -103,6 +103,10 @@
                                first
                                :content)))]
     (hickmaptostring items)))
+
+
+
+
 
 (defn title [body]
   (-> (s/select (s/descendant (s/class "h1")) body)
@@ -135,19 +139,22 @@
      }
     ))
 
+(defn difference [a b]
+  (remove (fn [v] (some #(= (:id %) (:id v)) b)) a))
+
+
 (defn filter-saved [ads]
-  (let [s-ads (sql/query db ["select id from ad"])]
-    (remove (fn [v] (some #(= (:id %) (:id v)) s-ads)) ads)
-    ))
-
-
-
+  (difference ads (sql/query db ["select id from ad"])))
 
 (defn save-all [occupation]
-  (let [links (filter-saved (annonselinks-formatted (annonselinks (read-string occupation))))]
-    (map #(save-ad (annonse (:id %) (:jobtype %))) links)
-    )
-  )
+  (->> occupation
+       (read-string)
+       (annonselinks)
+       (distinct)
+       (annonselinks-formatted)
+       (filter-saved)
+       (map #(annonse (:id %) (:jobtype %)))
+       (map save-ad)))
 
 
 (defn app []
