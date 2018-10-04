@@ -26,7 +26,7 @@
   (map #(sql/insert! db :descc %)
        (vec (map #(assoc '{} :key (first %)
                              :value (cstr/join "," (rest %))
-                             :adkey (:id ad)) (:k-decription ad)))))
+                             :adkey (:id ad)) (:k-description ad)))))
 
 
 (defn hickmaptostring [items]
@@ -115,12 +115,12 @@
 (defn advert [id jobtype]
   (let [url (finn-ad-url id jobtype)
         body (html url)]
-    {:id           id
-     :url          url
-     :jobtype      jobtype
-     :title        (title body)
-     :description  (description body)
-     :k-decription (keyed-description body)
+    {:id            id
+     :url           url
+     :jobtype       jobtype
+     :title         (title body)
+     :description   (description body)
+     :k-description (keyed-description body)
      }))
 
 
@@ -169,3 +169,19 @@
 
 (defn create-server []
   (server/run-server (app) {:port 8080}))
+
+
+;;query stuff
+(defn q-all-ads []
+  (sql/query db ["select * from ad"]))
+
+
+(defn q-add-descriptions [a]
+  (map #(assoc % :k-description (sql/query db ["select key, value from descc where adkey=?" (:id %)])) a))
+
+
+;;(finn.core/all-ads-search #"(?i)java[^s]")
+(defn all-ads-search [regex]
+  (->> (q-all-ads)
+       (remove #(nil? (re-find regex (:description %))))
+       (q-add-descriptions)))

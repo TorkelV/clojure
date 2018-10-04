@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99d62bc2-bbc8-4ec3-83ef-5219c78c1f98" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/finn/core.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/finn/core.clj" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,12 +16,12 @@
     <session id="965772650">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.open.time.9" value="2" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -45,15 +47,15 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="clj" value="7279" />
-          <entry key="md" value="52" />
+          <entry key="clj" value="8671" />
+          <entry key="md" value="53" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Clojure" value="7279" />
-          <entry key="Markdown" value="52" />
+          <entry key="Clojure" value="8671" />
+          <entry key="Markdown" value="53" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
@@ -61,21 +63,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/finn/core.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="329">
+              <caret line="178" column="28" lean-forward="true" selection-start-line="178" selection-start-column="28" selection-end-line="178" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="85">
-                <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+              <first_editor relative-caret-position="136">
+                <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
               </first_editor>
               <second_editor />
             </state>
@@ -86,7 +88,7 @@
         <entry file="file://$PROJECT_DIR$/test/finn/core_test.clj">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+              <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -134,6 +136,7 @@
       <find>snarest</find>
       <find>og trom</find>
       <find>ad-links</find>
+      <find>java</find>
     </findStrings>
     <replaceStrings>
       <replace>html</replace>
@@ -148,11 +151,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/annonser.txt" />
-        <option value="$PROJECT_DIR$/src/finn/core.clj" />
         <option value="$PROJECT_DIR$/project.clj" />
         <option value="$PROJECT_DIR$/test/finn/core_test.clj" />
         <option value="$PROJECT_DIR$/test/finn/test_data.clj" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/finn/core.clj" />
       </list>
     </option>
   </component>
@@ -174,7 +177,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -205,13 +207,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538178229476" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538178819628" />
     <property name="cursive.last.file.extension.C\:/Source/clojure/clojure/test" value="clj" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -221,7 +224,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
-  <component name="ReplState" timestamp="1538178226766">{:repl-history {:ide [], :local [{:command &quot;(annonse (htmlbody (finn-ad-url 130240027\n                                \&quot;fulltime\&quot;)) 130240027 \&quot;fulltime\&quot;)&quot;, :offset 108, :ns &quot;user&quot;} {:command &quot;(finn.core/annonse (finn.core/htmlbody (finn.core/finn-ad-url 130240027\n                                                              \&quot;fulltime\&quot;)) 130240027 \&quot;fulltime\&quot;)&quot;, :offset 168, :ns &quot;user&quot;} {:command &quot;(finn.core/annonse (finn.core/htmlbody (finn.core/finn-ad-url 130240027\n                                          \n                                                              \&quot;fulltime\&quot;)) 130240027 \&quot;fulltime\&quot;)&quot;, :offset 211, :ns &quot;user&quot;} {:command &quot;(finn.core/insert-ad (finn.core/annonse 130245998 \&quot;fulltime\&quot;)) &quot;, :offset 62, :ns &quot;user&quot;} {:command &quot;(apply str '(\&quot;123 \&quot; \&quot;123\&quot; \&quot;123\&quot;))&quot;, :offset 33, :ns &quot;user&quot;} {:command &quot;(apply str \&quot;,\&quot; '(\&quot;123 \&quot; \&quot;123\&quot; \&quot;123\&quot;))&quot;, :offset 37, :ns &quot;user&quot;} {:command &quot;(apply clojure.string/join \&quot;,\&quot; '(\&quot;123 \&quot; \&quot;123\&quot; \&quot;123\&quot;))&quot;, :offset 53, :ns &quot;user&quot;} {:command &quot;(clojure.string/join \&quot;,\&quot; '(\&quot;123 \&quot; \&quot;123\&quot; \&quot;123\&quot;))&quot;, :offset 47, :ns &quot;user&quot;} {:command &quot;(finn.core/insert-ad (finn.core/annonse 130240027 \&quot;fulltime\&quot;)) &quot;, :offset 63, :ns &quot;user&quot;} {:command &quot;(finn.core/annonse 130245998 \&quot;fulltime\&quot;)&quot;, :offset 40, :ns &quot;user&quot;} {:command &quot;(finn.core/annonse 130245997 \&quot;fulltime\&quot;)&quot;, :offset 40, :ns &quot;user&quot;} {:command &quot;(finn.core/annonse 130240027 \&quot;fulltime\&quot;)&quot;, :offset 40, :ns &quot;user&quot;} {:command &quot;(finn.core/annonse 130227757 \&quot;fulltime\&quot;)&quot;, :offset 40, :ns &quot;user&quot;} {:command &quot;(annonselinks-formatted (annonselinks (read-string 0.23)))&quot;, :offset 58, :ns &quot;user&quot;} {:command &quot;(finn.core/annonselinks-formatted (finn.core/annonselinks (read-string 0.23)))&quot;, :offset 78, :ns &quot;user&quot;} {:command &quot;(finn.core/annonselinks-formatted (finn.core/annonselinks (read-string \&quot;0.23\&quot;)))&quot;, :offset 80, :ns &quot;user&quot;} {:command &quot;(sql/query db [(str \&quot;select id from ad where id=\&quot; 123)&quot;, :offset 54, :ns &quot;user&quot;} {:command &quot;(sql/query db [(str \&quot;select id from ad where id=\&quot; 123))&quot;, :offset 55, :ns &quot;user&quot;} {:command &quot;(clojure.java.jdbc/query \&quot;postgresql://localhost:5432/shouter\&quot; [(str \&quot;select id from ad where id=\&quot; 123) ])&quot;, :offset 106, :ns &quot;user&quot;} {:command &quot;(clojure.java.jdbc/query \&quot;postgresql://localhost:5432/shouter\&quot; [(str \&quot;select id from ad where id=123\&quot;) ])&quot;, :offset 105, :ns &quot;user&quot;} {:command &quot;(sql/query db [(str \&quot;select id from ad where id=\&quot; 123) ])&quot;, :offset 57, :ns &quot;user&quot;} {:command &quot;(clojure.java.jdbc/query \&quot;postgresql://localhost:5432/shouter\&quot; [(str \&quot;select id from ad where id='123'\&quot;) ])&quot;, :offset 107, :ns &quot;user&quot;} {:command &quot;(let [links (annonselinks-formatted (annonselinks (read-string occupation)))]\n  (filter-saved links)\n  )&quot;, :offset 104, :ns &quot;user&quot;} {:command &quot;(let [links (finn.core/annonselinks-formatted (finn.core/annonselinks (read-string occupation)))]\n  (finn.core/filter-saved links)\n  )&quot;, :offset 134, :ns &quot;user&quot;} {:command &quot;(let [links (finn.core/annonselinks-formatted (finn.core/annonselinks (read-string \&quot;0.23\&quot;)))]\n  (finn.core/filter-saved links)\n  )&quot;, :offset 130, :ns &quot;user&quot;} {:command &quot;(let [links (finn.core/annonselinks-formatted (finn.core/annonselinks (read-string \&quot;0.23\&quot;)))]\n  links\n  )&quot;, :offset 105, :ns &quot;user&quot;} {:command &quot;(def lnks(let [links (finn.core/annonselinks-formatted (finn.core/annonselinks (read-string \&quot;0.23\&quot;)))]\n  \n  links) )&quot;, :offset 116, :ns &quot;user&quot;} {:command &quot;(map (sql/query db [(str \&quot;select id from ad where id='\&quot; (:id %) \&quot;'\&quot;)  ]) lnks)&quot;, :offset 78, :ns &quot;user&quot;} {:command &quot;(map (clojure.java.jdbc/query db [(str \&quot;select id from ad where id='\&quot; (:id %) \&quot;'\&quot;)  ]) lnks)&quot;, :offset 92, :ns &quot;user&quot;} {:command &quot;(map (clojure.java.jdbc/query \&quot;postgresql://localhost:5432/shouter\&quot; [(str \&quot;select id from ad where id='\&quot; (:id %) \&quot;'\&quot;)  ]) lnks)&quot;, :offset 127, :ns &quot;user&quot;} {:command &quot;(map #(clojure.java.jdbc/query \&quot;postgresql://localhost:5432/shouter\&quot; [(str \&quot;select id from ad where id='\&quot;&quot;, :offset 43} {:command &quot;(clojure.java.jdbc/query \&quot;postgresql://localhost:5432/shouter\&quot; [\&quot;select id from ad\&quot;  ])&quot;, :offset 87, :ns &quot;user&quot;} {:command &quot;(clojure.java.jdbc/query \&quot;postgresql://localhost:5432/shouter\&quot; [ \&quot;select * from ad \&quot;])&quot;, :offset 86, :ns &quot;user&quot;} {:command &quot;(clojure.java.jdbc/query \&quot;postgresql://localhost:5432/shouter\&quot; [ \&quot;select count(*) from ad \&quot;])&quot;, :offset 93, :ns &quot;user&quot;} {:command &quot;(count (map (clojure.java.jdbc/query db [(str \&quot;select id from ad where id='\&quot; (:id %) \&quot;'\&quot;)  ]) lnks))&quot;, :offset 100, :ns &quot;user&quot;} {:command &quot;(count (map (clojure.java.jdbc/query \&quot;postgresql://localhost:5432/shouter\&quot; [(str \&quot;select id from ad where id='\&quot; (:id %) \&quot;'\&quot;)  ]) lnks))&quot;, :offset 135, :ns &quot;user&quot;} {:command &quot;(count (map #(clojure.java.jdbc/query \&quot;postgresql://localhost:5432/shouter\&quot; [(str \&quot;select id from ad where id='\&quot; (:id %) \&quot;'\&quot;)  ]) lnks))&quot;, :offset 136, :ns &quot;user&quot;} {:command &quot;(map #(clojure.java.jdbc/query \&quot;postgresql://localhost:5432/shouter\&quot; [(str \&quot;select id from ad where id='\&quot; (:id %) \&quot;'\&quot;)  ]) lnks)&quot;, :offset 128, :ns &quot;user&quot;} {:command &quot;(map #(clojure.java.jdbc/query \&quot;postgresql://localhost:5432/shouter\&quot; [(str \&quot;select url from ad where id='\&quot; (:id %) \&quot;'\&quot;)  ]) lnks)&quot;, :offset 129, :ns &quot;user&quot;} {:command &quot;(clojure.java.jdbc/query \&quot;postgresql://localhost:5432/shouter\&quot; [\&quot;select * from ad\&quot;])&quot;, :offset 84, :ns &quot;user&quot;} {:command &quot;(count (clojure.java.jdbc/query \&quot;postgresql://localhost:5432/shouter\&quot; [\&quot;select * from ad\&quot;]))&quot;, :offset 92, :ns &quot;user&quot;} {:command &quot;(lnks)&quot;, :offset 6, :ns &quot;user&quot;} {:command &quot;(str 2 2)&quot;, :offset 9, :ns &quot;user&quot;} {:command &quot;lnks&quot;, :offset 4, :ns &quot;user&quot;} {:command &quot;(finn.core/annonselinks2 (read-string \&quot;0.23\&quot;))&quot;, :offset 46, :ns &quot;user&quot;} {:command &quot;(dec 2)&quot;, :offset 7, :ns &quot;user&quot;} {:command &quot;(str (dec 2))&quot;, :offset 13, :ns &quot;user&quot;} {:command &quot;(str \&quot;sdf\&quot; (dec 2))&quot;, :offset 19, :ns &quot;user&quot;} {:command &quot;(def lnks(let [links (finn.core/annonselinks-formatted (finn.core/annonselinks2 (read-string \&quot;0.23\&quot;)))]\n  \n  \n           links) )&quot;, :offset 129, :ns &quot;user&quot;} {:command &quot;(def lnks(let [links (finn.core/annonselinks-formatted (finn.core/annonselinks (read-string \&quot;0.23\&quot;)))]\n  \n  \n           links) )&quot;, :offset 128, :ns &quot;user&quot;} {:command &quot;(finn.core/filter-saved lnks)&quot;, :offset 29, :ns &quot;user&quot;} {:command &quot;(require 'finn.core as f)&quot;, :offset 25, :ns &quot;user&quot;} {:command &quot;(require [finn.core :as f])&quot;, :offset 27, :ns &quot;user&quot;} {:command &quot;(require [finn.core])&quot;, :offset 21, :ns &quot;user&quot;} {:command &quot;(require finn.core as :f)&quot;, :offset 25, :ns &quot;user&quot;} {:command &quot;(require finn.core :as f)&quot;, :offset 25, :ns &quot;user&quot;} {:command &quot;(require finn.core)&quot;, :offset 19, :ns &quot;user&quot;} {:command &quot;(finn.core/annonnse \&quot;fulltime\&quot; 129518955)&quot;, :offset 41, :ns &quot;user&quot;} {:command &quot;(finn.core/annonse)&quot;, :offset 19, :ns &quot;user&quot;} {:command &quot;(finn.core/annonse \&quot;fulltime\&quot;129518955)&quot;, :offset 39, :ns &quot;user&quot;} {:command &quot;(finn.core/annonse 129518955 \&quot;fulltime\&quot;)&quot;, :offset 40, :ns &quot;user&quot;} {:command &quot;(finn.core/htmlbody  (finn.core/finn-ad-url 129518955 \&quot;fulltime\&quot;))&quot;, :offset 66, :ns &quot;user&quot;} {:command &quot; (def h (finn.core/htmlbody  (finn.core/finn-ad-url 129518955 \&quot;fulltime\&quot;)))&quot;, :offset 75, :ns &quot;user&quot;} {:command &quot;h&quot;, :offset 1, :ns &quot;user&quot;} {:command &quot;(require hickory.select :as s)&quot;, :offset 30, :ns &quot;user&quot;} {:command &quot;(require '[hickory.select :as s])&quot;, :offset 33, :ns &quot;user&quot;} {:command &quot;s&quot;, :offset 1, :ns &quot;user&quot;} {:command &quot;(save-all2)&quot;, :offset 11, :ns &quot;user&quot;} {:command &quot;(finn.core/save-all2)&quot;, :offset 21, :ns &quot;user&quot;} {:command &quot;(finn.core/save-all2 \&quot;0.23\&quot;)&quot;, :offset 28, :ns &quot;user&quot;} {:command &quot;(annonselinks \&quot;0.23\&quot;)&quot;, :offset 21, :ns &quot;user&quot;} {:command &quot;(finn.core/annonselinks \&quot;0.23\&quot;)&quot;, :offset 31, :ns &quot;user&quot;} {:command &quot;(htmlbody (str \&quot;https://www.finn.no/job/fulltime/search.html?occupation=\&quot; 0.23 \&quot;&amp;page=\&quot; 1))&quot;, :offset 91, :ns &quot;user&quot;} {:command &quot;(finn.core/htmlbody (str \&quot;https://www.finn.no/job/fulltime/search.html?occupation=\&quot; 0.23 \&quot;&amp;page=\&quot; 1))&quot;, :offset 101, :ns &quot;user&quot;} {:command &quot;(def ebody(finn.core/htmlbody (str \&quot;https://www.finn.no/job/fulltime/search.html?occupation=\&quot; 0.23 \&quot;&amp;page=\&quot; 1)))&quot;, :offset 112, :ns &quot;user&quot;} {:command &quot;(description ebody)&quot;, :offset 19, :ns &quot;user&quot;} {:command &quot;(finn.core/title ebody)&quot;, :offset 23, :ns &quot;user&quot;} {:command &quot;(def ebody (finn.core/htmlbody (str \&quot;https://www.finn.no/job/fulltime/search.html?occupation=\&quot; 0.23 \&quot;&amp;page=\&quot; 1)))&quot;, :offset 113, :ns &quot;user&quot;} {:command &quot;(finn.core/annonse 0.23 \&quot;fulltime\&quot;)&quot;, :offset 35, :ns &quot;user&quot;} {:command &quot;(finn.core/annonse 130143737 \&quot;fulltime\&quot;)&quot;, :offset 40, :ns &quot;user&quot;} {:command &quot;(def ebody (finn.core/htmlbody \&quot;https://www.finn.no/job/fulltime/ad.html?finnkode=130001312\&quot;))&quot;, :offset 94, :ns &quot;user&quot;} {:command &quot;ebody&quot;, :offset 5, :ns &quot;user&quot;} {:command &quot;(finn.core/description ebody)&quot;, :offset 29, :ns &quot;user&quot;} {:command &quot;(finn.core/create-server)&quot;, :offset 25, :ns &quot;user&quot;} {:command &quot;(finn.core/save-all)&quot;, :offset 20, :ns &quot;user&quot;} {:command &quot;(finn.core/save-all 0.23)&quot;, :offset 25, :ns &quot;user&quot;} {:command &quot;(finn.core/keyed-description2 ebody)&quot;, :offset 36, :ns &quot;user&quot;} {:command &quot;(finn.core/keyed-description ebody)&quot;, :offset 35, :ns &quot;user&quot;} {:command &quot;(def abody (finn.core/htmlbody \&quot;https://www.finn.no/job/fulltime/search.html?occupation=0.23\&quot;))&quot;, :offset 95, :ns &quot;user&quot;} {:command &quot;(finn.core/annonser abody)&quot;, :offset 26, :ns &quot;user&quot;} {:command &quot;(finn.core/save-all \&quot;0.23\&quot;)&quot;, :offset 27, :ns &quot;user&quot;} {:command &quot;(html \&quot;https://www.finn.no/job/fulltime/ad.html?finnkode=130001312\&quot;)&quot;, :offset 68, :ns &quot;user&quot;} {:command &quot;(finn.core/html \&quot;https://www.finn.no/job/fulltime/ad.html?finnkode=130001312\&quot;)&quot;, :offset 78, :ns &quot;user&quot;} {:command &quot;(finn.core/html \&quot;https://www.finn.no/job/fulltime/search.html?occupation=0.23\&quot;)&quot;, :offset 79, :ns &quot;user&quot;} {:command &quot;(annonse (finn.core/html \&quot;https://www.finn.no/job/fulltime/ad.html?finnkode=130001312\&quot;))&quot;, :offset 88, :ns &quot;user&quot;} {:command &quot;(finn.core/advert (finn.core/html \&quot;https://www.finn.no/job/fulltime/ad.html?finnkode=130001312\&quot;))&quot;, :offset 97, :ns &quot;user&quot;} {:command &quot;(def abody (finn.core/html \&quot;https://www.finn.no/job/fulltime/ad.html?finnkode=130001312\&quot;))&quot;, :offset 90, :ns &quot;user&quot;} {:command &quot;(description abody)&quot;, :offset 19, :ns &quot;user&quot;} {:command &quot;abody&quot;, :offset 5, :ns &quot;user&quot;} {:command &quot;(finn.core/description abody)&quot;, :offset 29, :ns &quot;user&quot;}], :remote []}}</component>
+  <component name="ReplState" timestamp="1538682465818">{:repl-history {:ide [], :local [{:command &quot;(require finn.core)&quot;, :offset 19, :ns &quot;user&quot;} {:command &quot;(finn.core/annonnse \&quot;fulltime\&quot; 129518955)&quot;, :offset 41, :ns &quot;user&quot;} {:command &quot;(finn.core/annonse)&quot;, :offset 19, :ns &quot;user&quot;} {:command &quot;(finn.core/annonse \&quot;fulltime\&quot;129518955)&quot;, :offset 39, :ns &quot;user&quot;} {:command &quot;(finn.core/annonse 129518955 \&quot;fulltime\&quot;)&quot;, :offset 40, :ns &quot;user&quot;} {:command &quot;(finn.core/htmlbody  (finn.core/finn-ad-url 129518955 \&quot;fulltime\&quot;))&quot;, :offset 66, :ns &quot;user&quot;} {:command &quot; (def h (finn.core/htmlbody  (finn.core/finn-ad-url 129518955 \&quot;fulltime\&quot;)))&quot;, :offset 75, :ns &quot;user&quot;} {:command &quot;h&quot;, :offset 1, :ns &quot;user&quot;} {:command &quot;(require hickory.select :as s)&quot;, :offset 30, :ns &quot;user&quot;} {:command &quot;(require '[hickory.select :as s])&quot;, :offset 33, :ns &quot;user&quot;} {:command &quot;s&quot;, :offset 1, :ns &quot;user&quot;} {:command &quot;(save-all2)&quot;, :offset 11, :ns &quot;user&quot;} {:command &quot;(finn.core/save-all2)&quot;, :offset 21, :ns &quot;user&quot;} {:command &quot;(finn.core/save-all2 \&quot;0.23\&quot;)&quot;, :offset 28, :ns &quot;user&quot;} {:command &quot;(annonselinks \&quot;0.23\&quot;)&quot;, :offset 21, :ns &quot;user&quot;} {:command &quot;(finn.core/annonselinks \&quot;0.23\&quot;)&quot;, :offset 31, :ns &quot;user&quot;} {:command &quot;(htmlbody (str \&quot;https://www.finn.no/job/fulltime/search.html?occupation=\&quot; 0.23 \&quot;&amp;page=\&quot; 1))&quot;, :offset 91, :ns &quot;user&quot;} {:command &quot;(finn.core/htmlbody (str \&quot;https://www.finn.no/job/fulltime/search.html?occupation=\&quot; 0.23 \&quot;&amp;page=\&quot; 1))&quot;, :offset 101, :ns &quot;user&quot;} {:command &quot;(def ebody(finn.core/htmlbody (str \&quot;https://www.finn.no/job/fulltime/search.html?occupation=\&quot; 0.23 \&quot;&amp;page=\&quot; 1)))&quot;, :offset 112, :ns &quot;user&quot;} {:command &quot;(description ebody)&quot;, :offset 19, :ns &quot;user&quot;} {:command &quot;(finn.core/title ebody)&quot;, :offset 23, :ns &quot;user&quot;} {:command &quot;(def ebody (finn.core/htmlbody (str \&quot;https://www.finn.no/job/fulltime/search.html?occupation=\&quot; 0.23 \&quot;&amp;page=\&quot; 1)))&quot;, :offset 113, :ns &quot;user&quot;} {:command &quot;(finn.core/annonse 0.23 \&quot;fulltime\&quot;)&quot;, :offset 35, :ns &quot;user&quot;} {:command &quot;(finn.core/annonse 130143737 \&quot;fulltime\&quot;)&quot;, :offset 40, :ns &quot;user&quot;} {:command &quot;(def ebody (finn.core/htmlbody \&quot;https://www.finn.no/job/fulltime/ad.html?finnkode=130001312\&quot;))&quot;, :offset 94, :ns &quot;user&quot;} {:command &quot;ebody&quot;, :offset 5, :ns &quot;user&quot;} {:command &quot;(finn.core/description ebody)&quot;, :offset 29, :ns &quot;user&quot;} {:command &quot;(finn.core/create-server)&quot;, :offset 25, :ns &quot;user&quot;} {:command &quot;(finn.core/save-all 0.23)&quot;, :offset 25, :ns &quot;user&quot;} {:command &quot;(finn.core/keyed-description2 ebody)&quot;, :offset 36, :ns &quot;user&quot;} {:command &quot;(finn.core/keyed-description ebody)&quot;, :offset 35, :ns &quot;user&quot;} {:command &quot;(def abody (finn.core/htmlbody \&quot;https://www.finn.no/job/fulltime/search.html?occupation=0.23\&quot;))&quot;, :offset 95, :ns &quot;user&quot;} {:command &quot;(finn.core/annonser abody)&quot;, :offset 26, :ns &quot;user&quot;} {:command &quot;(html \&quot;https://www.finn.no/job/fulltime/ad.html?finnkode=130001312\&quot;)&quot;, :offset 68, :ns &quot;user&quot;} {:command &quot;(finn.core/html \&quot;https://www.finn.no/job/fulltime/ad.html?finnkode=130001312\&quot;)&quot;, :offset 78, :ns &quot;user&quot;} {:command &quot;(finn.core/html \&quot;https://www.finn.no/job/fulltime/search.html?occupation=0.23\&quot;)&quot;, :offset 79, :ns &quot;user&quot;} {:command &quot;(annonse (finn.core/html \&quot;https://www.finn.no/job/fulltime/ad.html?finnkode=130001312\&quot;))&quot;, :offset 88, :ns &quot;user&quot;} {:command &quot;(finn.core/advert (finn.core/html \&quot;https://www.finn.no/job/fulltime/ad.html?finnkode=130001312\&quot;))&quot;, :offset 97, :ns &quot;user&quot;} {:command &quot;(description abody)&quot;, :offset 19, :ns &quot;user&quot;} {:command &quot;abody&quot;, :offset 5, :ns &quot;user&quot;} {:command &quot;(finn.core/description abody)&quot;, :offset 29, :ns &quot;user&quot;} {:command &quot;(def abody (finn.core/html \&quot;https://www.finn.no/job/fulltime/ad.html?finnkode=130001312\&quot;))&quot;, :offset 90, :ns &quot;user&quot;} {:command &quot;(finn.core/keyed-description abody)&quot;, :offset 35, :ns &quot;user&quot;} {:command &quot;(def abody (finn.core/html \&quot;https://www.finn.no/job/fulltime/search.html?occupation=0.23\&quot;))&quot;, :offset 91, :ns &quot;user&quot;} {:command &quot;(finn.core/ad-links abody)&quot;, :offset 26, :ns &quot;user&quot;} {:command &quot;(finn.core/ad-links \&quot;https://www.finn.no/job/fulltime/search.html?occupation=0.23\&quot;)&quot;, :offset 83, :ns &quot;user&quot;} {:command &quot;(finn.core/ad-links \&quot;0.23\&quot; )&quot;, :offset 28, :ns &quot;user&quot;} {:command &quot;(finn.core/save-all)&quot;, :offset 20, :ns &quot;user&quot;} {:command &quot;(finn.core/save-all \&quot;0.23\&quot;)&quot;, :offset 27, :ns &quot;user&quot;} {:command &quot;'(:desc \&quot;123\&quot; :id \&quot;5543\&quot;)&quot;, :offset 25, :ns &quot;user&quot;} {:command &quot;'(assoc :r 123 (:desc \&quot;123\&quot; :id \&quot;5543\&quot;))&quot;, :offset 40, :ns &quot;user&quot;} {:command &quot;'(assoc :r 123 '(:desc \&quot;123\&quot; :id \&quot;5543\&quot;))&quot;, :offset 41, :ns &quot;user&quot;} {:command &quot;'(assoc (:desc \&quot;123\&quot; :id \&quot;5543\&quot;) :r 12)&quot;, :offset 39, :ns &quot;user&quot;} {:command &quot;'(assoc '(:desc \&quot;123\&quot; :id \&quot;5543\&quot;) :r 12)&quot;, :offset 40, :ns &quot;user&quot;} {:command &quot;'(assoc {} (:desc \&quot;123\&quot; :id \&quot;5543\&quot;) :r 12)&quot;, :offset 42, :ns &quot;user&quot;} {:command &quot;'(assoc '{} (:desc \&quot;123\&quot; :id \&quot;5543\&quot;) :r 12)&quot;, :offset 43, :ns &quot;user&quot;} {:command &quot;(assoc '(:desc \&quot;123\&quot; :id \&quot;5543\&quot;) :r 12)&quot;, :offset 39, :ns &quot;user&quot;} {:command &quot;(assoc (:desc \&quot;123\&quot; :id \&quot;5543\&quot;) :r 12)&quot;, :offset 38, :ns &quot;user&quot;} {:command &quot;(assoc {:desc \&quot;123\&quot; :id \&quot;5543\&quot;} :r 12)&quot;, :offset 38, :ns &quot;user&quot;} {:command &quot;(finn.core/q-all-ads)&quot;, :offset 21, :ns &quot;user&quot;} {:command &quot;(finn.core/q-all-ads ())&quot;, :offset 24, :ns &quot;user&quot;} {:command &quot;(finn.core/q-all-ads #())&quot;, :offset 25, :ns &quot;user&quot;} {:command &quot;(finn.core/q-all-ads #{})&quot;, :offset 25, :ns &quot;user&quot;} {:command &quot;(finn.core/q-all-ads #{identity})&quot;, :offset 33, :ns &quot;user&quot;} {:command &quot;(finn.core/q-all-ads identity)&quot;, :offset 30, :ns &quot;user&quot;} {:command &quot;(finn.core/q-all-ads nil)&quot;, :offset 25, :ns &quot;user&quot;} {:command &quot;(finn.core/q-all-ads #{%})&quot;, :offset 26, :ns &quot;user&quot;} {:command &quot;(finn.core/q-all-ads '(fn [k] k))&quot;, :offset 33, :ns &quot;user&quot;} {:command &quot;(finn.core/q-all-ads (fn [k] k))&quot;, :offset 32, :ns &quot;user&quot;} {:command &quot;(finn.core/q-all-ads ) &quot;, :offset 23, :ns &quot;user&quot;} {:command &quot;(finn.core/q-all-ads (fn [k] k)) &quot;, :offset 32, :ns &quot;user&quot;} {:command &quot;(finn.core/q-all-ads '(filter (= (:title) \&quot;Head are searching for an Business Intelligence Analyst\&quot;) )) &quot;, :offset 103, :ns &quot;user&quot;} {:command &quot;(finn.core/q-all-ads '(filter #(= (:title %) \&quot;Head are searching for an Business Intelligence Analyst\&quot;) )) &quot;, :offset 106, :ns &quot;user&quot;} {:command &quot;(finn.core/q-all-ads #(filter (fn [v] (:title v) \&quot;Head are searching for an Business Intelligence Analyst\&quot;) %)) &quot;, :offset 111, :ns &quot;user&quot;} {:command &quot;(finn.core/q-all-ads) &quot;, :offset 22, :ns &quot;user&quot;} {:command &quot;(filter #(re-matches #\&quot;Clojure\&quot; (:description %) ) (finn.core/q-all-ads))&quot;, :offset 73, :ns &quot;user&quot;} {:command &quot;(filter #(re-matches #\&quot;.*Clojure.*\&quot; (:description %) ) (finn.core/q-all-ads))&quot;, :offset 77, :ns &quot;user&quot;} {:command &quot;(filter #(re-matches #\&quot;java\&quot; (:description %)) (finn.core/q-all-ads))&quot;, :offset 69, :ns &quot;user&quot;} {:command &quot;(-&gt;&gt; (finn.core/q-all-ads) (filter #(re-matches #\&quot;java\&quot; (:description %)) ))&quot;, :offset 76, :ns &quot;user&quot;} {:command &quot;(-&gt;&gt; (finn.core/q-all-ads) (filter #(re-matches #\&quot;java\&quot; (:description %))))&quot;, :offset 75, :ns &quot;user&quot;} {:command &quot;(def q (finn.core/q-all-ads))&quot;, :offset 29, :ns &quot;user&quot;} {:command &quot;q&quot;, :offset 1, :ns &quot;user&quot;} {:command &quot;(filter #(re-matches #\&quot;java\&quot; (:description %)) q)&quot;, :offset 49, :ns &quot;user&quot;} {:command &quot;(filter #(re-matches #\&quot;Java\&quot; (:description %)) q)&quot;, :offset 49, :ns &quot;user&quot;} {:command &quot;(map (:description %) q)&quot;, :offset 24, :ns &quot;user&quot;} {:command &quot;(re-matches #\&quot;Java\&quot; \&quot;Java\&quot; )&quot;, :offset 28, :ns &quot;user&quot;} {:command &quot;(re-matches #\&quot;sdfsdfJavadfs\&quot; \&quot;Java\&quot;)&quot;, :offset 36, :ns &quot;user&quot;} {:command &quot;(re-matches #\&quot;Java\&quot; \&quot;sdfsdfJavasdfsdf\&quot;)&quot;, :offset 39, :ns &quot;user&quot;} {:command &quot;(re-matches #\&quot;.*Java.*\&quot; \&quot;sdfsdfJavasdfsdf\&quot;)&quot;, :offset 43, :ns &quot;user&quot;} {:command &quot;(filter #(re-matches #\&quot;.*Java.*\&quot; (:description %)) q)&quot;, :offset 53, :ns &quot;user&quot;} {:command &quot;(filter #(nil? (re-matches #\&quot;.*Java.*\&quot; (:description %))) q)&quot;, :offset 60, :ns &quot;user&quot;} {:command &quot;(remove #(nil? (re-matches #\&quot;.*Java.*\&quot; (:description %))) q)&quot;, :offset 60, :ns &quot;user&quot;} {:command &quot;(map #(re-matches #\&quot;.*Java.*\&quot; (:description %)) q)&quot;, :offset 50, :ns &quot;user&quot;} {:command &quot;(map #(:description %) q)&quot;, :offset 25, :ns &quot;user&quot;} {:command &quot;(map #(re-matches #\&quot;.*java.*\&quot; %) (map #(:description %) q))&quot;, :offset 59, :ns &quot;user&quot;} {:command &quot;(map #(re-find #\&quot;.*java.*\&quot; %) (map #(:description %) q))&quot;, :offset 56, :ns &quot;user&quot;} {:command &quot;(map #(re-find #\&quot;java\&quot; %) (map #(:description %) q))&quot;, :offset 52, :ns &quot;user&quot;} {:command &quot;(remove #(nil? (re-find #\&quot;Java\&quot; (:description %))) q)&quot;, :offset 53, :ns &quot;user&quot;} {:command &quot;(remove #(nil? (re-find #\&quot;Clojure\&quot; (:description %))) q)&quot;, :offset 56, :ns &quot;user&quot;} {:command &quot;(finn.core/all-ads-search #\&quot;Clojure\&quot;)&quot;, :offset 37, :ns &quot;user&quot;}], :remote []}}</component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -234,7 +237,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Clojure Application.core_test">
+  <component name="RunManager" selected="Clojure REPL.REPL">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -350,18 +353,19 @@
       <workItem from="1538062878166" duration="26000" />
       <workItem from="1538062946735" duration="1510000" />
       <workItem from="1538064604318" duration="21273000" />
-      <workItem from="1538164735193" duration="12199000" />
+      <workItem from="1538164735193" duration="12862000" />
+      <workItem from="1538230004334" duration="7502000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74831000" />
+    <option name="totallyTimeSpent" value="82996000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12953092" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13059701" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -370,14 +374,14 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4989339" weight="0.3275488" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4978678" visible="true" weight="0.33188722" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4978678" weight="0.33188722" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.33579725" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5021322" side_tool="true" visible="true" weight="0.33188722" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5021322" side_tool="true" visible="true" weight="0.3308026" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -385,7 +389,7 @@
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="REPL" order="6" side_tool="true" visible="true" weight="0.358742" />
+      <window_info active="true" anchor="right" id="REPL" order="6" side_tool="true" visible="true" weight="0.358742" />
       <window_info anchor="right" id="Leiningen" order="7" />
       <window_info anchor="right" id="Database" order="8" />
       <window_info anchor="right" id="Palette&#9;" order="9" />
@@ -417,16 +421,8 @@
     <entry file="file://$PROJECT_DIR$/annonser.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/finn/test_html.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/finn/test_data/clj.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test/finn/test_html.txt" />
+    <entry file="file://$PROJECT_DIR$/test/finn/test_data/clj.java" />
     <entry file="file://$PROJECT_DIR$/project.clj">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -434,34 +430,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/finn/test_data.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/finn/core_test.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/finn/core.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="329">
+          <caret line="178" column="28" lean-forward="true" selection-start-line="178" selection-start-column="28" selection-end-line="178" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="85">
-            <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          <first_editor relative-caret-position="136">
+            <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/finn/core_test.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/finn/test_data.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
         </state>
       </provider>
     </entry>
