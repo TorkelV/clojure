@@ -181,7 +181,7 @@
 
 
 ;;(finn.core/all-ads-search #"(?i)java[^s]")
-(defn all-ads-search [regex]
+(defn all-ads-search [regex column]
   (->> (q-all-ads)
-       (remove #(nil? (re-find regex (:description %))))
+       (remove #(nil? (re-find regex (column %))))
        (q-add-descriptions)))
