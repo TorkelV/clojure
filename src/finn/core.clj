@@ -180,8 +180,79 @@
   (map #(assoc % :k-description (sql/query db ["select key, value from descc where adkey=?" (:id %)])) a))
 
 
+
+(def re-language '{:java          #"(?i)java[^s]"
+                   :javascript    #"(?i)javascript|([^A-zæøå]JS[^A-zæøå@])"
+                   :clojure       #"(?i)clojure[^s]"
+                   :clojurescript #"(?i)clojurescript"
+                   :python        #"(?i)python"
+                   :kotlin        #"(?i)kotlin"
+                   :r             #"(/|\(|,|\s|\.)R(/|\s|\.|,|\))"
+                   :sql           #"(?i)SQL"
+                   :c-sharp       #"(?i)(C.?#)|(C.?sharp)"
+                   :f-sharp       #"(?i)(F.?#)|(F.?sharp)"
+                   :cpp           #"(?i)c.?\+\+"
+                   :c             #"(/|\(|,|\s|\.)C(/|\s|\.|,|\))\s*[^s#+]"
+                   :php           #"(?i)([^A-zæøå]php7?[^A-zæøå])"
+                   :ruby          #"(?i)([^A-zæøå]ruby[^A-zæøå])"
+                   :scala         #"(?i)([^A-zæøå]scala[^A-zæøå])"
+                   :typescript    #"(?i)typescript|([^A-zæøå]TS[^A-zæøå@])"
+                   :lua           #"(?i)([^A-zæøå]lua[^A-zæøå])"
+                   :go            #"([^A-zæøå](GO|Go)[^A-zæøå])"
+                   :haskell       #"(?i)haskell"
+                   :swift         #"(?i)([^A-zæøå]swift[^A-zæøå])"
+                   :objective-c   #"(?i)([^A-zæøå](obj(ective)?.?c)[^A-zæøå])"
+                   :css           #"(?i)([^A-zæøå]css3?[^A-zæøå])"
+                   :html          #"(?i)([^A-zæøå]html5?[^A-zæøå])"
+                   :xml           #"(?i)([^A-zæøå]XML[^A-zæøå])"
+                   :sparql        #"(?i)sparql"
+                   :xquery        #"(?i)xquery"
+                   :groovy        #"(?i)([^A-zæøå]groovy[^A-zæøå])"
+                   })
+
+(def re-framework '{:angular    #"(?i)([^A-zæøå]angular.?(js)?[^A-zæøå])"
+                    :react      #"(?i)([^A-zæøå]react.?(js)?[^A-zæøå])"
+                    :vue        #"(?i)([^A-zæøå]vue.?(js)?[^A-zæøå])"
+                    :spring     #"(?i)([^A-zæøå]spring(boot)?[^A-zæøå])"
+                    :datadog    #"(?i)([^A-zæøå]datadog[^A-zæøå])"
+                    :jquery     #"(?i)([^A-zæøå]jquery[^A-zæøå])"
+                    :net        #"(?i)([^A-zæøå]net[^A-zæøå])"
+                    :postgres   #"(?i)([^A-zæøå]postgres(ql)?[^A-zæøå])"
+                    :mysql      #"(?i)([^A-zæøå]mysql[^A-zæøå])"
+                    :jenkins    #"(?i)([^A-zæøå]jenkins[^A-zæøå])"
+                    :maven      #"(?i)([^A-zæøå]maven[^A-zæøå])"
+                    :docker     #"(?i)([^A-zæøå]docker[^A-zæøå])"
+                    :git        #"(?i)([^A-zæøå]git(lab)?(hub)?[^A-zæøå])"
+                    :trello     #"(?i)([^A-zæøå]trello[^A-zæøå])"
+                    :jira       #"(?i)([^A-zæøå]jira|confluence[^A-zæøå])"
+                    :confluence #"(?i)([^A-zæøå]jira|confluence[^A-zæøå])"
+                    :node       #"(?i)([^A-zæøå](node(\.?js)?|npm|yarn)[^A-zæøå])"
+                    :tdd        #"(?i)([^A-zæøå](tdd|test.?driven.?development)[^A-zæøå])"
+                    :scrum      #"(?i)([^A-zæøå]scrum"
+                    :kanban     #"(?i)([^A-zæøå]kanban[^A-zæøå])"
+                    :aws        #"(?i)([^A-zæøå](aws|amazon))"
+                    :auzre      #"(?i)([^A-zæøå](azure)[^A-zæøå])"
+                    :guava      #"(?i)([^A-zæøå](guava)[^A-zæøå])"
+                    :linux      #"(?i)linux|ubuntu|unix"
+                    :gis        #"(?i)([^A-zæøå](gis)[^A-zæøå])"
+                    :rest       #"([^A-zæøå](REST|Rest)[^A-zæøå])"
+                    :ml         #"(?i)([^A-zæøå](maskinlæring|ml|machine learning)[^A-zæøå])"
+                    :nlp        #"(?i)[^A-zæøå](NLP|natural language (processing)?)[^A-zæøå]"
+                    :ai         #"(?i)([^A-zæøå](ai|artificial intelligence|maskinlæring|ml|((machine|deep) learning)|NLP|natural language (processing)?)[^A-zæøå])"
+                    :iot        #"(?i)([^A-zæøå](iot|internet of things)[^A-zæøå])"
+                    :big-data   #"(?i)([^A-zæøå](big data|stordata)[^A-zæøå])"
+                    :unity      #"(?i)unity"
+                    :graphql    #"(?i)graphql"
+                    :etl        #"(?i)([^A-zæøå](etl|extract.?transform.?load)[^A-zæøå])"
+                    :saas       #"(?i)([^A-zæøå](saas)[^A-zæøå])"
+                    :frontend   #"(?i)front.?end"
+                    :backend    #"(?i)back.?end"
+                    :devops     #"(?i)([^A-zæøå](dev.?ops)[^A-zæøå]"})
+
 ;;(finn.core/all-ads-search #"(?i)java[^s]")
 (defn all-ads-search [regex column]
   (->> (q-all-ads)
        (remove #(nil? (re-find regex (column %))))
        (q-add-descriptions)))
+
+
