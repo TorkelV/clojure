@@ -11,6 +11,10 @@
 
 (def db "postgresql://localhost:5432/shouter")
 
+(extend-protocol sql/IResultSetReadColumn
+  org.postgresql.jdbc4.Jdbc4Array
+  (result-set-read-column [pgobj metadata i]
+    (vec (.getArray pgobj))))
 
 (defn finn-ad-url [id jobtype]
   (str "https://www.finn.no/job/" jobtype "/ad.html?finnkode=" id))
@@ -143,32 +147,6 @@
        (map save-ad)))
 
 
-(defn app []
-  (routes
-    (GET "/parttime/:id" [id :as req]
-      {:status  200
-       :headers {"Content-Type" "application/json"}
-       :body    (json/write-str (advert id "parttime"))})
-    (GET "/fulltime/:id" [id :as req]
-      {:status  200
-       :headers {"Content-Type" "application/json"}
-       :body    (json/write-str (advert id "fulltime"))})
-    (GET "/management/:id" [id :as req]
-      {:status  200
-       :headers {"Content-Type" "application/json"}
-       :body    (json/write-str (advert id "management"))})
-    (GET "/ads/:occupation" [occupation :as req]
-      {:status  200
-       :headers {"Content-Type" "application/json"}
-       :body    (json/write-str (ad-links (read-string occupation)))})
-    (GET "/adsformatted/:occupation" [occupation :as req]
-      {:status  200
-       :headers {"Content-Type" "application/json"}
-       :body    (json/write-str (ad-links-formatted (ad-links (read-string occupation))))})))
-
-
-(defn create-server []
-  (server/run-server (app) {:port 8080}))
 
 
 ;;query stuff
@@ -183,7 +161,7 @@
   (map #(assoc % :keywords (map :keyword (sql/query db ["select keyword from keywords where adkey=?" (:id %)]))) a))
 
 
-(def re-keywords '[["Java" #"(?i)java[^s]"]
+(def re-keywords '[["Java" #"(?i)[^A-zæøå]java[^s]"]
                    ["JavaScript" #"(?i)javascript|([^A-zæøå]JS[^A-zæøå@])"]
                    ["Clojure" #"(?i)clojure[^s]"]
                    ["ClojureScript" #"(?i)clojurescript"]
@@ -248,9 +226,13 @@
                    ["Cloud" #"(?i)([^A-zæøå](cloud|sky(en|basert)?)[^A-zæøå])"]
                    ["Frontend" #"(?i)front.?end"]
                    ["Backend" #"(?i)back.?end"]
+                   ["Fullstack" #"(?i)full.?stack"]
                    ["Devops" #"(?i)[^A-zæøå](dev.?ops)"]
                    ["TensorFlow" #"(?i)[^A-zæøå](tensor.?flow)"]
-                   ["Business Intelligence" #"(?i)([^A-zæøå](BI|Business.?Intelligence)[^A-zæøå])"]])
+                   ["Business Intelligence" #"(?i)([^A-zæøå](BI|Business.?Intelligence)[^A-zæøå])"]
+                   ["iOS" #"(?i)([^A-zæøå]iOS[^A-zæøå])"]
+                   ["Android" #"(?i)[^A-zæøå]Android"]
+                   ])
 
 
 
@@ -258,19 +240,11 @@
   (remove #(nil? (re-find regex (column %))) a))
 
 ;;(finn.core/all-ads-search #"(?i)java[^s]")
-;;(finn.core/all-ads-search (finn.core/re-language :java) :description)
 (defn q-all-ads-search [regex column]
   (->> (q-all-ads)
        (filter-ads-regex regex column)
        (q-add-descriptions)
        (q-add-keywords)))
-
-(defn q-all-ads-joined []
-  (->> (q-all-ads)
-       (q-add-descriptions)
-       (q-add-keywords)))
-
-
 
 
 (defn q-ads-without-keywords []
@@ -286,4 +260,36 @@
        (map #(sql/insert! db :keywords %))))
 
 
+(defn update-finn []
+  (save-all "0.23")
+  (save-all-keywords (q-ads-without-keywords) re-keywords))
 
+
+(defn q-all-categories []
+  (->> (sql/query db ["select distinct keyword from keywords"])
+       (map :keyword)))
+
+(defn q-all-ads-joined []
+  (->> (sql/query db ["select s.id,s.title,s.description,s.jobtype,s.keywords, array_agg(key) ks, array_agg(value) vs from (\nselect ad.id, title, description, jobtype, array_agg(keyword) as keywords from ad \ninner join keywords k on k.adkey = ad.id\nwhere ad.id in (\nselect distinct adkey from keywords)\ngroup by ad.id) s\ninner join descc d on d.adkey = s.id\n\tgroup by s.id,s.title,s.description,s.jobtype,s.keywords"])
+      (map #(assoc '{} :id (:id %)
+                      :title (:title %)
+                      :description (:description %)
+                      :jobtype (:jobtype %)
+                      :keywords (:keywords %)
+                      :desc (partition 2 (interleave (:ks %) (:vs %)))))))
+
+
+(defn app []
+  (routes
+    (GET "/ads/" []
+      {:status  200
+       :headers {"Content-Type" "application/json"}
+       :body    (json/write-str (q-all-ads-joined))})))
+
+(defn save-as-json []
+  (spit "data.js" (str "const categories=" (json/write-str (q-all-categories)) "\n\r"
+                       "const ads=" (json/write-str (q-all-ads-joined))) :encoding "UTF-8"))
+
+
+(defn create-server []
+  (server/run-server (app) {:port 8080}))
