@@ -194,7 +194,7 @@
                    ["Spring" #"(?i)([^A-zæøå]spring(boot)?[^A-zæøå])"]
                    ["Datadog" #"(?i)([^A-zæøå]datadog[^A-zæøå])"]
                    ["jQuery" #"(?i)([^A-zæøå]jquery[^A-zæøå])"]
-                   [".NET" #"(?i)([^A-zæøå]net[^A-zæøå])"]
+                   [".NET" #"(?i)([^A-zæøå]\.net[^A-zæøå])"]
                    ["PostgreSQL" #"(?i)([^A-zæøå]postgres(ql)?[^A-zæøå])"]
                    ["MySQL" #"(?i)([^A-zæøå]mysql[^A-zæøå])"]
                    ["Jenkins" #"(?i)([^A-zæøå]jenkins[^A-zæøå])"]
@@ -209,7 +209,7 @@
                    ["Scrum" #"(?i)[^A-zæøå]scrum"]
                    ["Kanban" #"(?i)([^A-zæøå]kanban[^A-zæøå])"]
                    ["AWS" #"(?i)([^A-zæøå](aws|amazon))"]
-                   ["Auzre" #"(?i)([^A-zæøå](azure)[^A-zæøå])"]
+                   ["Azure" #"(?i)([^A-zæøå](azure)[^A-zæøå])"]
                    ["Guava" #"(?i)([^A-zæøå](guava)[^A-zæøå])"]
                    ["Linux" #"(?i)linux|ubuntu|unix"]
                    ["GIS" #"(?i)([^A-zæøå](gis)[^A-zæøå])"]
@@ -232,6 +232,9 @@
                    ["Business Intelligence" #"(?i)([^A-zæøå](BI|Business.?Intelligence)[^A-zæøå])"]
                    ["iOS" #"(?i)([^A-zæøå]iOS[^A-zæøå])"]
                    ["Android" #"(?i)[^A-zæøå]Android"]
+                   ["Gradle" #"(?i)([^A-zæøå](gradle)[^A-zæøå])"]
+                   ["Nim" #"(?i)([^A-zæøå](nim)[^A-zæøå])"]
+                   ["Cobol" #"(?i)([^A-zæøå](cobol)[^A-zæøå])"]
                    ])
 
 
@@ -252,7 +255,7 @@
 
 
 ;;(finn.core/save-all-keywords (finn.core/q-ads-without-keywords) finn.core/re-keywords)
-;;(finn.core/save-all-keywords (finn.core/q-all-ads) [["TensorFlow" #"(?i)[^A-zæøå](tensor.?flow)"]])
+;;(finn.core/save-all-keywords (finn.core/q-all-ads) [[".NET" #"(?i)([^A-zæøå]\.net[^A-zæøå])"]])
 (defn save-all-keywords [a keywords]
   (->> (map #(vec [(first %) (map :id (filter-ads-regex (last %) :description a))]) keywords)
        (map (fn [v] (map #(assoc '{} :keyword (first v) :adkey %) (last v))))
@@ -271,13 +274,23 @@
 
 (defn q-all-ads-joined []
   (->> (sql/query db ["select s.id,s.title,s.description,s.jobtype,s.keywords, array_agg(key) ks, array_agg(value) vs from (\nselect ad.id, title, description, jobtype, array_agg(keyword) as keywords from ad \ninner join keywords k on k.adkey = ad.id\nwhere ad.id in (\nselect distinct adkey from keywords)\ngroup by ad.id) s\ninner join descc d on d.adkey = s.id\n\tgroup by s.id,s.title,s.description,s.jobtype,s.keywords"])
-      (map #(assoc '{} :id (:id %)
-                      :title (:title %)
-                      :description (:description %)
-                      :jobtype (:jobtype %)
-                      :keywords (:keywords %)
-                      :desc (partition 2 (interleave (:ks %) (:vs %)))))))
+       (map #(assoc '{} :id (:id %)
+                        :title (:title %)
+                        :description (:description %)
+                        :jobtype (:jobtype %)
+                        :keywords (:keywords %)
+                        :desc (partition 2 (interleave (:ks %) (:vs %)))))))
 
+
+(defn q-popularity []
+  (sql/query db ["select keyword, count(keyword) as c from keywords group by keyword order by c desc"]))
+
+(defn q-popularity-langs []
+  (sql/query db ["select keyword, count(keyword) as c
+  from keywords where keyword in ('C#', 'Java', 'JavaScript', 'C', 'C++', 'Clojure',
+   'PHP', 'SQL', 'CSS', 'HTML', 'Python', 'R', 'Ruby', 'Kotlin', 'Scala', 'TypeScript',
+    'Go', 'F#', 'Lua', 'Objective C', 'Haskell', 'Groovy', 'Nim', 'Swift', 'Cobol', 'ClojureScript')
+   group by keyword order by c desc"]))
 
 (defn app []
   (routes
@@ -285,6 +298,7 @@
       {:status  200
        :headers {"Content-Type" "application/json"}
        :body    (json/write-str (q-all-ads-joined))})))
+
 
 (defn save-as-json []
   (spit "data.js" (str "const categories=" (json/write-str (q-all-categories)) "\n\r"
